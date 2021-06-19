@@ -13,10 +13,10 @@ class StudyController extends GetxController {
     super.onInit();
     print("Study Controller Mounted");
     var token = await getToken;
-    var user = await AuthServices.userVerify(token: token);
-    if (user == null) {
-      Get.off(() => AuthScreen());
-    }
+    // var user = await AuthServices.userVerify(token: token);
+    // if (user == null) {
+    //   Get.off(() => AuthScreen());
+    // }
     getAllStudies();
   }
 
@@ -25,6 +25,9 @@ class StudyController extends GetxController {
     var token = await getToken;
     var res = await FetchData.getAllStudies(token: token);
     studies = res.result.data;
+    if (studies == null) {
+      Get.off(() => AuthScreen());
+    }
     isLoading = false;
     update();
   }

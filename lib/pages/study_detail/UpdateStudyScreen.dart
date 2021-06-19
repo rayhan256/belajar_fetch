@@ -21,7 +21,7 @@ class UpdateStudyScreen extends StatelessWidget {
                   child: Container(
                     margin: EdgeInsets.symmetric(vertical: 15),
                     child: Text(
-                      "Create Studies",
+                      "Update Studies",
                       style:
                           TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
                     ),

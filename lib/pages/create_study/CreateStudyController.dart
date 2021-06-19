@@ -47,6 +47,7 @@ class CreateStudyController extends GetxController {
     if (res != null) {
       Get.off(() => StudyScreen());
     }
+    print(res);
   }
 
   String base64String(Uint8List data) {

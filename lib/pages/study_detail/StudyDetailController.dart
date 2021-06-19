@@ -62,5 +62,6 @@ class StudyDetailController extends GetxController {
     if (res != null) {
       Get.off(() => StudyScreen());
     }
+    print(res);
   }
 }
