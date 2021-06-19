@@ -84,7 +84,14 @@ class StudyCard extends StatelessWidget {
                 width: 200,
                 child: Column(
                   children: [
-                    Text(title),
+                    Text(
+                      title == "" ? "No Title" : title,
+                      style:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
                     Text(content),
                   ],
                 ),
